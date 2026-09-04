@@ -100,7 +100,7 @@ export function AboutSection() {
   };
 
   return (
-    <section id="about" className="py-32 md:py-48 bg-black relative border-t border-white/5 overflow-hidden">
+    <section id="about" className="py-20 md:py-28 bg-black relative border-t border-white/5 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Technical Grid */}
@@ -126,10 +126,10 @@ export function AboutSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-white/50 block mb-6">
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-white/50 block mb-2">
                 About Driden
               </span>
-              <h2 className="text-5xl md:text-[64px] leading-[1.1] font-bold tracking-tight text-white mb-10">
+              <h2 className="text-5xl md:text-[64px] leading-[1.1] font-bold tracking-tight text-white mb-8">
                 Engineering Tomorrow's Autonomous Intelligence
               </h2>
             </motion.div>
@@ -164,8 +164,19 @@ export function AboutSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-wrap gap-4 md:gap-6"
             >
-              <Button variant="ghost">Learn More</Button>
-              <Button variant="primary" withArrow>Our Technology</Button>
+              <Button 
+                variant="ghost"
+                onClick={(e) => { e.preventDefault(); document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' }); }}
+              >
+                Learn More
+              </Button>
+              <Button 
+                variant="primary" 
+                withArrow
+                onClick={(e) => { e.preventDefault(); document.getElementById('technology')?.scrollIntoView({ behavior: 'smooth' }); }}
+              >
+                Our Technology
+              </Button>
             </motion.div>
 
 
